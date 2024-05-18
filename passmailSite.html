@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Passmail Site</title>
   </head>
   <body>
     <h2>Saved Entries</h2>
     <ul id="savedOutput"></ul>
 
-    <script src="scripts.js"></script>
+    <script>
+      // Retrieve input data from Local Storage
+      const email = localStorage.getItem("email");
+      const password = localStorage.getItem("password");
+
+      // Display input data
+      const savedOutput = document.getElementById("savedOutput");
+      const li = document.createElement("li");
+      li.textContent = `Email: ${email}, Password: ${password}`;
+      savedOutput.appendChild(li);
+    </script>
   </body>
 </html>
