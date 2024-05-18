@@ -1,15 +1,14 @@
-// Function to save input to Local Storage
 function saveInput() {
     const email = document.getElementById('emailInput').value;
     const password = document.getElementById('passwordInput').value;
+    
+    console.log("Email:", email);
+    console.log("Password:", password);
 
-    const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/;
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+    
+    console.log("Data saved to Local Storage");
 
-    if (emailRegex.test(email) && password.length > 0) {
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
-        document.getElementById('message').textContent = 'Input saved successfully!';
-    } else {
-        document.getElementById('message').textContent = 'Please enter a valid email and password.';
-    }
+    document.getElementById('message').textContent = 'Input saved successfully!';
 }
