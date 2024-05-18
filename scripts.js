@@ -52,12 +52,12 @@ function displaySavedEntries() {
 displaySavedEntries();
 
 
-// function resetVariables() {
-//     // Reset passmails array to an empty array
-//     localStorage.setItem('passmails', JSON.stringify([]));
+function resetVariables() {
+    // Reset passmails array to an empty array
+    localStorage.setItem('passmails', JSON.stringify([]));
     
-//     // Optionally, you can reset other variables if needed
-// }
+    // Optionally, you can reset other variables if needed
+}
 
-// // Call resetVariables when you want to reset the variables
-// resetVariables();
+// Call resetVariables when you want to reset the variables
+resetVariables();
